@@ -1,11 +1,11 @@
 // REQUIRED FEATURES:
 // 1 - Create a variable called `firstName` and assign it the value of your first name
-firstName = 'Chad ';  
+firstName = 'Chad';  
 // 2 - Create a second variable called `lastName` and assign it the value of your last name
 lastName = 'Rhiger';
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
-let fullName = firstName + lastName;
+let fullName = firstName + ' ' + lastName;
 // 4 - Console log the value of `fullName`
 console.log( fullName );
 // 5 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
@@ -23,7 +23,7 @@ let pets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 let friendsPets = 1; 
 // 11 - Add two pets to your `pets` variable
-pets + 2;
+(pets += 2), pets;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 const allowedPets = 5;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
@@ -61,17 +61,13 @@ else if( pets > allowedPets ){
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
-let mostPets
-
-
-
-// let mostPets;
-// if( pets >= friendsPets){
-//     console.log( 'I have the mostPets!!' );
-// }
-// else{
-//     console.log( 'I do not have the most pets...' );
-// }
+let mostPets = friendsPets
+if(pets >= friendsPets){
+    mostPets = pets;
+} else {
+    mostPets = friendsPets;
+}
+console.log('The value of most pets is ' + mostPets);
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
